@@ -1042,6 +1042,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   gameInput: {fileID: 1247912877}
+  counterslayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1001 &3147093883145996509
 PrefabInstance:
   m_ObjectHideFlags: 0
