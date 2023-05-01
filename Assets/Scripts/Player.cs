@@ -9,8 +9,11 @@ public class Player : MonoBehaviour
     
     [SerializeField]
     private GameInput gameInput;
+    [SerializeField]
+    private LayerMask counterslayerMask;
 
     private bool isWalking;
+    private Vector3 lastInteractDir;
 
     // private LineRenderer lineRenderer;
     
@@ -23,6 +26,37 @@ public class Player : MonoBehaviour
     // }
 
     private void Update()
+    {
+        HandleMovement();
+        HandleInteractions();
+    }
+    
+
+    public bool IsWalking()
+    {
+        return isWalking;
+    }
+
+    private void HandleInteractions()
+    {
+        float interactDistance = 2f;
+        Vector2 inputVector = gameInput.GetMovingVectorNormalized();
+        Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+        if (moveDir != Vector3.zero)
+        {
+            lastInteractDir = moveDir;
+        }
+        if (Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance))
+        {
+            if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter))
+            {
+                //Has ClearCounter
+                clearCounter.Interact();
+            }
+        }
+    }
+
+    private void HandleMovement()
     {
         Vector2 inputVector = gameInput.GetMovingVectorNormalized();
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
@@ -79,10 +113,5 @@ public class Player : MonoBehaviour
         // Отображение луча Raycast в виде линии
         // lineRenderer.SetPosition(0, transform.position);
         // lineRenderer.SetPosition(1, transform.position + moveDir * playerSize);
-    }
-
-    public bool IsWalking()
-    {
-        return isWalking;
     }
 }
