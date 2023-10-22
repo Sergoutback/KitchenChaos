@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ConteinerCounter : BaseCounter
 {
     public event EventHandler OnPlayerGrabbedObject;
-    [SerializeField] private KitchenObjectSO kitchenObjectSo;
+    
+    [SerializeField] private KitchenObjectSO kitchenObjectSO;
 
 
 
@@ -15,7 +17,7 @@ public class ConteinerCounter : BaseCounter
         if (!player.HasKitchenObject())
         {
             //Player is not carrying anything
-            Transform kitchenObjectTransform = Instantiate(kitchenObjectSo.prefab);
+            Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab);
             kitchenObjectTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(player);
             
             OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);

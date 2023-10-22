@@ -22,8 +22,9 @@ public class KitchenObject : MonoBehaviour
         
         if (this.kitchenObjectParent.HasKitchenObject())
         {
-            Debug.LogError("KitchenObjectParent alraedy has KitchenObject!");
+            Debug.LogError("KitchenObjectParent already has KitchenObject!");
         }
+        
         kitchenObjectParent.SetKitchenObject(this);
         
         transform.parent = kitchenObjectParent.GetKitchenObjectFollowTransform();
@@ -34,4 +35,12 @@ public class KitchenObject : MonoBehaviour
     {
         return kitchenObjectParent;
     }
+
+    public void DestroySelf()
+    {
+        kitchenObjectParent.ClearKitchenObject();
+        
+        Destroy(gameObject);
+    }
 }
+
