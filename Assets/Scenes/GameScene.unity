@@ -469,6 +469,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7416114735958470905, guid: ef6a8224ae752384aa1b732e3c3f6933,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 89aa11a18fedf7e449697bdb80f8a9d5,
+        type: 2}
     - target: {fileID: 7925239396925088713, guid: ef6a8224ae752384aa1b732e3c3f6933,
         type: 3}
       propertyPath: m_RootOrder
@@ -542,6 +548,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3495972662670617781, guid: 4acd56a2feb9a7b4fa6f5e45269ded06,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: f1f1067936aa01a4b9760dc42165925b,
+        type: 2}
     - target: {fileID: 4292914163003162498, guid: 4acd56a2feb9a7b4fa6f5e45269ded06,
         type: 3}
       propertyPath: m_Name
@@ -1039,6 +1051,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConteinerCounter_MeatPattyUncooked
       objectReference: {fileID: 0}
+    - target: {fileID: 4389664003530885424, guid: 1b8c5f7c6374d394b91d776b5e521a2c,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 15c60f25195ca2743a1aa9c38a282d3d,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1730,6 +1748,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5608101684982713486, guid: 0a77f439419f5c945b2fc0ae1ba1be6a,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 4135a181f97823a43aea0a2b56c9817c,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1876,6 +1900,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5498339750727356118, guid: bb7ad7a15f522d04395f0f06c64e4f21,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: aa755616c0aed3d4a8b5df533bf109b6,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
